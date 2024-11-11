@@ -1,0 +1,18 @@
+import java.io.IOException;
+
+public class Inhertitance extends Activity2{
+	
+	public static void main(String[] args) throws IOException {
+		
+		//Inputs the Name
+		System.out.println("Please Enter your Student Name: ");
+		Activity2.student_name =  scan.nextLine();
+		
+		//Calls Every Method by Order
+		Activity2.inputUnits();	
+		Activity2.inputBase();
+		Activity2.inputMisc();
+		Activity2.getTuition(num_units, base_fee, misc_fee);
+		Activity2.displayName(student_name, tuition_fee);	
+	}
+}

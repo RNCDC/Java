@@ -1,0 +1,6 @@
+opening eclipse
+directory:
+C:\Users\private\eclipse-workspace
+
+saving file directory
+C:\Users\private\Documents\JAVA\src\test

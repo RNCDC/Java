@@ -1,0 +1,12 @@
+434,nicole
+433,teve
+434,nicole,27
+433,teve,17
+433,teve,23
+143,joga
+143,joga,43
+433,teve,2276
+55,raven
+12,jonathan
+55,raven,30
+12,jonathan,33

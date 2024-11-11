@@ -1,0 +1,77 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Activity2 {
+	
+	//variables that will be used
+	static String student_name;
+	static int num_units;
+	static int base_fee;
+	static int misc_fee;
+	static int tuition_fee;
+	
+	static Scanner scan = new Scanner(System.in);
+	static BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
+	
+	//MAIN
+	public static void main (String [] args) throws IOException{
+		
+		System.out.println("Please input your student name: ");
+		student_name = scan.nextLine();
+		Methods();
+	}
+
+	public static void Methods() {
+	inputUnits();
+	inputBase();
+	inputMisc();
+	tuition_fee = getTuition(num_units,base_fee, misc_fee);
+	displayName(student_name, tuition_fee);
+}
+	
+	
+	//Method B for Units
+	public static void inputUnits() {
+		System.out.println("Please input your number of Units: ");
+		num_units = scan.nextInt();
+		if(num_units<=0) {
+			System.out.println("Error!");
+			inputUnits();
+		}
+	}
+	
+	//Method C for Base Fee
+	public static void inputBase() {
+		System.out.println("Please input your Base Fees: ");
+		base_fee = scan.nextInt();
+		while(base_fee<=0) {
+			System.out.println("That's a Negative Input!");
+			inputBase();
+		}
+	}
+	
+	//Method D for Misc. Fees
+	public static void inputMisc() {
+		System.out.println("Please input your Misc Fees: ");
+		misc_fee = scan.nextInt();
+		while(misc_fee<=0) {
+			System.out.println("That's a Negative Input!");
+			inputMisc();	
+	}
+}
+	
+	//Method E for Tuition Fee
+	public static int getTuition(int num_units, int base_fee, int misc_fee) {
+		tuition_fee = (num_units*base_fee+misc_fee);
+		return (tuition_fee);
+}
+	
+	//Method F for Display
+	public static void displayName(String student_name, float tuition_fee) {
+		System.out.println("\nThis is your Name: " + student_name);
+		System.out.println("This is your Total Tuition Fee: " + tuition_fee);
+	}
+}
+
